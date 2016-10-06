@@ -1,0 +1,297 @@
+\documentclass{article}
+\input{./definitions}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+% \usepackage{showlabels}
+\usepackage{color}
+\usepackage{fullpage}
+
+\title{Razones}
+\date{}
+
+\begin{document}
+\maketitle
+
+Del art\'iculo \cite{bhatPRL05} tnemos que
+$\mu^{\mathrm{abcd}}=(\mu^{\mathrm{abdc}})^{*}$ y que
+adem\'as $\mu$ es real. De las notas tenemos que 
+
+\begin{align}\label{3.e} 
+K^{\rma\rmb}_{nm}(-\bfk) 
+&=\sum_l v^\rma_{nl}(-\bfk) S^\rmb _{lm} (-\bfk) 
+=\sum_l (-v^\rma_{ln}(\bfk))(- S^\rmb _{ml} (\bfk) )  
+\nonumber\\
+&=\sum_l  
+v^{\rma *}_{nl}(\bfk)  
+S^{\rmb *} _{lm} (\bfk) 
+=\sum_l 
+(v^\rma_{nl}(\bfk)  
+S^\rmb _{lm} (\bfk))^*=K^{\rma\rmb *}_{nm}(\bfk) 
+.  
+\end{align} 
+
+\begin{align}\label{5.e}
+\dot K^{\rma\rmb}
+&=
+\frac{e^2}{i\hbar^2}
+\int\frac{d^3k}{8\pi^3}
+\sum_{vcc'}
+K^{\rma\rmb}_{c'c}
+r^\rmc_{cv}r^\rmd_{vc'}
+\left(
+\frac{1}{\omega-\omega_{c'v}-i\epsilon}
+-
+\frac{1}
+{\omega-\omega_{cv}+i\epsilon}
+\right) 
+E^\rmc(\omega)E^{\rmd\star}(\omega) 
+\nonumber\\
+&=
+\frac{e^2}{i\hbar^2}
+\int\frac{d^3k}{8\pi^3}
+\sum_{vcc'}
+\Big(
+(K^{\rma\rmb}_{c'c}
+r^\rmc_{cv}r^\rmd_{vc'}) \big |_{\bfk>0}
++
+(K^{\rma\rmb}_{c'c}
+r^\rmc_{cv}r^\rmd_{vc'}) \big |_{\bfk<0}
+\Big) 
+\nonumber\\
+% &\times 
+% \left(
+% \frac{1}{\omega-\omega_{c'v}-i\epsilon}
+% -
+% \frac{1}
+% {\omega-\omega_{cv}+i\epsilon}
+% \right) 
+% E^\rmc(\omega)E^{\rmd\star}(\omega) 
+% \nonumber\\
+% &=
+% \frac{e^2}{i\hbar^2}
+% \int_{\bfk>0}\frac{d^3k}{8\pi^3}
+% \sum_{vcc'}
+% \Big(
+% K^{\rma\rmb}_{c'c}
+% r^\rmc_{cv}r^\rmd_{vc'}
+% +
+% K^{\rma\rmb*}_{c'c}
+% r^\rmc_{vc}r^\rmd_{c'v}
+% \Big) 
+% \nonumber\\
+% &\times 
+% \left(
+% \frac{1}{\omega-\omega_{c'v}-i\epsilon}
+% -
+% \frac{1}
+% {\omega-\omega_{cv}+i\epsilon}
+% \right) 
+% E^\rmc(\omega)E^{\rmd\star}(\omega) 
+% \nonumber\\
+% &=
+% \frac{e^2}{i\hbar^2}
+% \int_{\bfk>0}\frac{d^3k}{8\pi^3}
+% \sum_{vcc'}
+% \Big(
+% K^{\rma\rmb}_{c'c}
+% r^\rmc_{cv}r^\rmd_{vc'}
+% +
+% (K^{\rma\rmb}_{c'c}
+% r^\rmc_{cv}r^\rmd_{vc'})^*
+% \Big) 
+% \nonumber\\
+% &\times 
+% \left(
+% \frac{1}{\omega-\omega_{c'v}-i\epsilon}
+% -
+% \frac{1}
+% {\omega-\omega_{cv}+i\epsilon}
+% \right) 
+% E^\rmc(\omega)E^{\rmd\star}(\omega) 
+% \nonumber\\
+% &=
+% \frac{e^2}{i\hbar^2}
+% \frac{1}{2}
+% \int\frac{d^3k}{8\pi^3}
+% \sum_{vcc'}
+% 2\mathrm{Re}\Big[
+% K^{\rma\rmb}_{c'c}
+% r^\rmc_{cv}r^\rmd_{vc'}
+% \Big]
+% \Big\{
+% {\cal P}\left(
+% \frac{\go_{c'c}}{(\omega-\omega_{c'v})(\omega-\omega_{cv})}
+% \right) 
+% \nonumber\\
+% &+
+% i\pi 
+% \left(
+% \gd(\omega-\omega_{c'v}) 
+% +
+% \gd(\omega-\omega_{cv}) 
+% \right) 
+% \Big\}
+% E^\rmc(\omega)E^{\rmd\star}(\omega) 
+% \nonumber\\
+% &\approx 
+% \frac{\pi e^2}{\hbar^2}
+% \int\frac{d^3k}{8\pi^3}
+% \sum_{vcc'}
+% \mathrm{Re}\Big[
+% K^{\rma\rmb}_{c'c}
+% r^\rmc_{cv}r^\rmd_{vc'}
+% \Big]
+% \Big(
+% \gd(\omega-\omega_{c'v}) 
+% +
+% \gd(\omega-\omega_{cv}) 
+% \Big) 
+% E^\rmc(\omega)E^{\rmd\star}(\omega) 
+% \nonumber\\
+& \ldots \nonumber \\
+& =
+\frac{\pi e^2}{\hbar^2}
+\int\frac{d^3k}{8\pi^3}
+\sum_{vcc'}
+\mathrm{Re}
+\Big[ 
+K^{\rma\rmb}_{c'c} 
+r^\rmc_{cv}r^\rmd_{vc'}
++ 
+K^{\rma\rmb}_{cc'} 
+r^\rmc_{c'v}r^\rmd_{vc}
+\Big]
+\gd(\omega-\omega_{cv})  
+E^\rmc(\omega)E^{\rmd\star}(\omega) 
+,
+& \ldots \nonumber \\
+&=
+\frac{\pi e^2}{\hbar^2}
+\int\frac{d^3k}{8\pi^3}
+\sum_{vcc'}
+\mathrm{Re}
+\Big[
+K^{\rma\rmb}_{c'c}
+r^\rmc_{cv}r^\rmd_{vc'}
++
+K^{\rma\rmb}_{cc'}
+r^\rmc_{vc'}r^\rmd_{cv}
+\Big]
+\gd(\omega-\omega_{cv}) 
+E^\rmc(\omega)E^{\rmd\star}(\omega) 
+\nonumber\\
+&=
+\frac{\pi e^2}{\hbar^2}
+\int\frac{d^3k}{8\pi^3}
+\sum_{vcc'}
+\mathrm{Re}\Big[
+K^{\rma\rmb}_{c'c}
+\Big(
+r^\rmc_{cv}r^\rmd_{vc'}
++
+r^\rmd_{cv} r^\rmc_{vc'}
+\Big) 
+\Big]
+\gd(\omega-\omega_{cv}) 
+E^\rmc(\omega)E^{\rmd\star}(\omega) 
+\nonumber\\
+&=
+\frac{\pi e^2}{\hbar^2}
+\int\frac{d^3k}{8\pi^3}
+\sum_{vcc'}
+\mathrm{Re}\Big[
+K^{\rma\rmb}_{c'c}
+\Big(
+r^\rmc_{cv}r^\rmd_{vc'}
++
+(\rmc\leftrightarrow\rmd) 
+\Big) 
+\Big]
+\gd(\omega-\omega_{cv}) 
+E^\rmc(\omega)E^{\rmd\star}(\omega) 
+\nonumber\\
+&=
+\frac{\pi e^2}{\hbar^2}
+\int\frac{d^3k}{8\pi^3}
+\sum_{vcc'}
+\mathrm{Re}\Big[
+K^{\rma\rmb}_{c'c}
+\Big(
+r^\rmc_{vc'} r^\rmd_{cv}
++
+(\rmc\leftrightarrow\rmd) 
+\Big) 
+\Big]
+\gd(\omega-\omega_{cv}) 
+E^\rmc(\omega)E^{\rmd\star}(\omega) 
+.
+\end{align} 
+
+ \begin{align}\label{8.e}
+\dot K^{\rma\rmb}
+=
+\mu^{\mathrm{abcd}} 
+E^\rmc(\omega)E^{\rmd\star}(\omega) 
+,
+\end{align}
+\begin{align}\label{9.e}
+\mu^{\mathrm{abcd}}
+&=
+\frac{\pi e^2}{\hbar^2}
+\int\frac{d^3k}{8\pi^3}
+\sum'_{vcc'}
+\mathrm{Re}\Big[ 
+K^{\rma\rmb}_{c'c}
+\Big( 
+r^\rmc_{vc'} r^\rmd_{cv}
++
+(\rmc\leftrightarrow\rmd) 
+\Big) 
+\Big]
+\gd(\omega-\omega_{cv}) 
+,
+\end{align}
+donde se puede ver que $\mu^{\mathrm{abcd}}$ es real.
+
+Entonces, 
+\begin{align}
+\dot K^{\rma\rmb} &= \mu^{\mathrm{abcd}} E^{c}(-\omega)E^{d}(\omega) \nonumber\\
+&= \mu^{\mathrm{abcd}} E^{c*} E^{d} + \mu^{\mathrm{abdc}} E^{d*} E^{c} \nonumber\\
+&= \mu^{\mathrm{abcd}} E^{c*} E^{d} + (\mu^{\mathrm{abcd}})^{*} E^{d*} E^{c}
+\end{align}
+\begin{align}
+&= \mu^{\mathrm{abcd}} E^{c*} E^{d} + \mu^{\mathrm{abcd}} E^{d*} E^{c} \nonumber\\    
+&= \mu^{\mathrm{abcd}} E^{c*} E^{d} + \mu^{\mathrm{abcd}} (E^{d} E^{c*})^{*} \nonumber\\    
+&= \mu^{\mathrm{abcd}} [E^{c*} E^{d} + (E^{d} E^{c*})^{*}] \nonumber\\    
+&= 2 \mu^{\mathrm{abcd}} \mathrm{Re} [E^{c*} E^{d}]
+\end{align}
+
+\begin{align}
+E^{a} = E_{0}e^{i \varphi_{a}} \Rightarrow
+& \quad E^{c*} = E_{0}e^{-i \varphi_{c}}  \nonumber \\
+& \quad E^{d} = E_{0}e^{i \varphi_{d}} 
+\end{align}
+\begin{align}
+E^{c*}E^{d} &= E^{2}_{0} e^{i(\varphi_{d} - \varphi_{c})} \nonumber \\
+E^{c*}E^{d} &= E^{2}_{0} [\cos(\varphi_{d} - \varphi_{c}) + 
+i\sin (\varphi_{d} - \varphi_{c}) ] \nonumber \\
+\mathrm{Re}[E^{c*}E^{d}] &= E^{2}_{0} \cos(\varphi_{d} - \varphi_{c})
+\end{align}
+
+Entonces tenemos que 
+\begin{equation}
+\dot K^{\rma\rmb} = 2 \mu^{\mathrm{abcd}} E^{2}_{0} \cos(\varphi_{d} - \varphi_{c})
+\end{equation}
+que tiene valor m\'aximo cuando $\varphi_{d} = \varphi_{c}$
+
+
+\bibliographystyle{plain}
+\bibliography{razones.bib}{}
+
+\end{document}
+
+
+
+
+
